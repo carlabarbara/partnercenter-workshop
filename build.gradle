@@ -1,0 +1,22 @@
+group 'com.psmelser'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+	mavenLocal()
+	jcenter()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+	compile(
+			[ group: 'io.github.springsocialmicrosoft',	name: 'spring-social-microsoft-partnercenter',  version: '7.1.0'],
+			[ group: 'ch.qos.logback', 					name: 'logback-classic', 						version: '1.1.8'],
+			[ group: 'org.slf4j', 						name: 'slf4j-api',								version: "1.7.22"]
+	)
+	compileOnly "org.projectlombok:lombok:1.16.16"
+}
